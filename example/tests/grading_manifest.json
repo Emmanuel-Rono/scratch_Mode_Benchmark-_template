@@ -1,0 +1,13 @@
+{
+  "task_id": "demo_scratch_json",
+  "mode": "scratch",
+  "artifact_type": "json",
+  "pass_threshold": 0.8,
+  "checks": [
+    {"id": "total_items", "type": "exact", "selector": "result.total_items", "expected": 3, "weight": 0.2},
+    {"id": "average_score", "type": "numeric_tolerance", "selector": "result.average_score", "expected": 80.0, "abs_tolerance": 0.01, "weight": 0.3},
+    {"id": "top_id", "type": "exact", "selector": "result.top_id", "expected": "B", "weight": 0.2},
+    {"id": "source_provenance", "type": "nonempty", "selector": "result.source", "weight": 0.15},
+    {"id": "title_present", "type": "nonempty", "selector": "title", "weight": 0.15}
+  ]
+}

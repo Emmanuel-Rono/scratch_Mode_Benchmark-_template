@@ -1,0 +1,13 @@
+{
+  "task_id": "spreadsheet_scratch_example",
+  "mode": "scratch",
+  "artifact_type": "spreadsheet",
+  "pass_threshold": 0.8,
+  "checks": [
+    {"id": "result_value", "type": "numeric_tolerance", "selector": "Results!B5", "expected": 250.0, "abs_tolerance": 0.01, "weight": 0.45},
+    {"id": "result_is_wired", "type": "formula_present", "selector": "Results!B5", "weight": 0.20},
+    {"id": "required_summary_sheet", "type": "exists", "selector": "sheet:Results", "weight": 0.15},
+    {"id": "number_format", "type": "number_format", "selector": "Results!B5", "expected": "0.0", "weight": 0.10},
+    {"id": "source_citation", "type": "nonempty", "selector": "Results!B8", "weight": 0.10}
+  ]
+}

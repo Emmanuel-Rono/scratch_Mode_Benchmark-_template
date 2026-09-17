@@ -1,0 +1,29 @@
+# Buyer-neutral metadata template. Map field names to the buyer's canonical Harbor 1.1 bundle before production delivery.
+schema_version = "1.1"
+id = "__TASK_ID__"
+mode = "scratch"
+category = "generic"
+
+[paths]
+instruction = "instruction.md"
+environment = "environment"
+solution = "solution"
+tests = "tests"
+output = "/output/submission.<ext>"
+
+[timeouts]
+agent_seconds = 1800
+verifier_seconds = 120
+
+[resources]
+cpu = 2
+memory_mb = 4096
+
+[grading]
+verifier = "tests/verifier.py"
+pass_threshold = 0.8
+
+[difficulty]
+status = "unmeasured"
+rollouts_per_model = 5
+metric = "pass@3"

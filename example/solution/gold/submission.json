@@ -1,0 +1,9 @@
+{
+  "title": "Observation Summary",
+  "result": {
+    "total_items": 3,
+    "average_score": 80.0,
+    "top_id": "B",
+    "source": "environment/inputs/observations.json"
+  }
+}
